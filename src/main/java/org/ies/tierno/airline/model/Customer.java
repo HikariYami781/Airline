@@ -3,7 +3,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
+
 
 @Data
 @NoArgsConstructor
@@ -15,7 +15,7 @@ public class Customer {
 
     // private List<Flights> flights; (No estoy segura)
     
-    public  int compareTo(Customer o){
+   /* public  int compareTo(Customer o){
         int compare= this.nif.compareTo(o.nif);
         if (compare==0){
             compare=this.name.compareTo(o.name);
@@ -23,7 +23,11 @@ public class Customer {
                 compare=this.surname.compareTo(o.surname);
             }
         }
-
-        return compare;
     }
+        return compare;
+
+        MIRAR ESTO!!
+
+        */
+
 }
