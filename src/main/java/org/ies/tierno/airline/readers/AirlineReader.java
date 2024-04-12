@@ -1,5 +1,6 @@
 package org.ies.tierno.airline.readers;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.ies.tierno.airline.model.Airline;
 
 import java.io.File;
