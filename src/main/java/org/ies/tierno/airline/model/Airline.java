@@ -38,17 +38,14 @@ Dado un número de vuelo, devuelve los clientes que son
 pasajeros en el vuelo.
  */
 
-    //MIRAR ESTE METODO
-
     public List<Client> getPassangerClientByFlightNumber(int flightNum){
         Flight flight=flights.get(flightNum);
         List<Client> passengerClie= new ArrayList<>();
 
         if (flight!=null){
             for (Passenger passenger: flight.getPassengers().values()) {
-                String passengerNif=passenger.getNif();
                 for (Client client: clients){
-                    if (client.getNif().equals(passengerNif)){
+                    if (client.getNif().equals(passenger.getNif())){
                         passengerClie.add(client);
                         break;
                     }
