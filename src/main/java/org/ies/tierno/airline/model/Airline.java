@@ -106,6 +106,13 @@ public void addLuggagePassenger(int flightNum, String nif,Luggage luggage){
 Dado un nif, devuelve los vuelos en los que ese cliente es pasajero.
  */
 
+    public List<Flight> getFlightByNif(String nif){
+        return flights
+                .values()
+                .stream()
+                .filter(flight -> flight.getPassengers().containsKey(nif))
+                .collect(Collectors.toList());
+    }
 
 }
 
