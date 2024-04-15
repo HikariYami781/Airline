@@ -79,7 +79,17 @@ Dado un número de vuelo y un nif, devuelve el asiento del pasajero.
 Si no existe el vuelo o el pasajero, devuelve null.
  */
 
-    //MIRARLO EN CASA
+    public Integer seatByFlightNumAndNif(int flightNum, String nif){
+        Flight flight= flights.get(flightNum);
+        if (flight !=null){
+            Passenger passenger= flight.getPassengers().get(nif);
+            if (passenger !=null){
+            return  passenger.getSeatNumber();
+            }
+        }
+        return null;
+    }
+
 
 
 
@@ -89,18 +99,6 @@ Dado un número de vuelo, un nif y un luggage, añade el luggage a ese
  pasajero. En caso de que no exista el vuelo o el pasajero, muestra en pantalla un mensaje de error explicativo.
  */
 
-    //MIRAR EN CASA
-
-public void addLuggagePassenger(int flightNum, String nif,Luggage luggage){
-    Flight flight= flights.get(flightNum);
-    if (flight!=null){
-        Passenger passenger= flight.getPassengers().get(nif);
-        if (passenger!=null){
-
-        }
-    }
-}
-
 
 
 
@@ -108,13 +106,17 @@ public void addLuggagePassenger(int flightNum, String nif,Luggage luggage){
 Dado un nif, devuelve los vuelos en los que ese cliente es pasajero.
  */
 
-    //REVISAR EN CASA
     public List<Flight> getFlightByNif(String nif){
-        return flights
-                .values()
-                .stream()
-                .filter(flight -> flight.getPassengers().containsKey(nif))
-                .collect(Collectors.toList());
+        List<Flight> flightPassenger = new ArrayList<>();
+
+        for (Flight flight : flights.values()) {
+            if (flight.getPassengers().containsKey(nif)) {
+                flightPassenger.add(flight);
+            }
+        }
+
+        return flightPassenger;
+
     }
 
 }
