@@ -15,4 +15,9 @@ public class Passenger {
     private List<Luggage> luggages;
 
 
+    public void Luggage(Luggage luggage) {
+        luggages.add(luggage);
+    }
+
+
 }

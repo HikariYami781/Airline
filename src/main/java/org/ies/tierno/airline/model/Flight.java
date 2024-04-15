@@ -17,4 +17,15 @@ public class Flight {
     private String destination;
     private Date flightDate;
     private Map<Integer, Passenger> passengers;
+
+    public Passenger getPassengerByNif(String nif){
+        for (Passenger passenger: passengers.values()){
+            if (passenger.getNif().equals(nif)){
+                return passenger;
+            }
+        }
+        return null;
+    }
+
+
 }

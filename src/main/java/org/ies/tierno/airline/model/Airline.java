@@ -96,6 +96,21 @@ Dado un número de vuelo, un nif y un luggage, añade el luggage a ese
  pasajero. En caso de que no exista el vuelo o el pasajero, muestra en pantalla un mensaje de error explicativo.
  */
 
+public void LuggageToPassenger(int fligthNum, String nif, Luggage luggage){
+    Flight flight= flights.get(fligthNum);
+
+    if (flight !=null) {
+        Passenger passenger = flight.getPassengerByNif(nif);
+        if (passenger != null) {
+            passenger.Luggage(luggage);
+            System.out.println(" Equipaje adjudicado al pasajero  " + nif);
+        } else {
+            System.out.println(" Pasajero " + nif + " no encontrado en el vuelo " + fligthNum);
+        }
+    }else {
+        System.out.println("Vuelo con numero "+fligthNum+" no encontrado");
+     }
+    }
 
 
 
