@@ -38,7 +38,7 @@ Dado un número de vuelo, devuelve los clientes que son
 pasajeros en el vuelo.
  */
 
-    public List<Client> getPassangerClientByFlightNumber(int flightNum){
+    public List<Client> getPassengerClientByFlightNumber(int flightNum){
         Flight flight=flights.get(flightNum);
         List<Client> passengerClie= new ArrayList<>();
 
