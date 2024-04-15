@@ -106,6 +106,7 @@ public void addLuggagePassenger(int flightNum, String nif,Luggage luggage){
 Dado un nif, devuelve los vuelos en los que ese cliente es pasajero.
  */
 
+    //REVISAR EN CASA
     public List<Flight> getFlightByNif(String nif){
         return flights
                 .values()
