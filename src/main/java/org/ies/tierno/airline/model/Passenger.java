@@ -19,5 +19,9 @@ public class Passenger {
         luggages.add(luggage);
     }
 
+    /*Estoy agregando el equipaje para luego llamarlo en la clase principal
+    y sumarseló al pasajero
+     */
+
 
 }

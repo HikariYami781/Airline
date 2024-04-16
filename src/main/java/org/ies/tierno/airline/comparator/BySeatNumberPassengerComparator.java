@@ -1,4 +1,6 @@
-package org.ies.tierno.airline.model;
+package org.ies.tierno.airline.comparator;
+
+import org.ies.tierno.airline.model.Passenger;
 
 import java.util.Comparator;
 

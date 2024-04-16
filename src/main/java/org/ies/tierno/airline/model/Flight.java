@@ -27,5 +27,7 @@ public class Flight {
         return null;
     }
 
+    //Estoy obteniendo el Nif del pasajero y poder utilizarlo en otro métodos
+
 
 }
